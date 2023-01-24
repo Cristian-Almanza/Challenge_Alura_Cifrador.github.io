@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge Encriptador</title>
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <nav class="nav">
+                <img src="./img/Logo.png" class="logo">
+            </nav>
+        </header>
+        <main class="contenido">
+            <textarea id="textoEntrada" class="text-area" cols="27" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <h6>Solo letras minúsculas y sin acentos.</h6>
+        </main>
+        <aside class="sidebar">
+            <textarea id="mensaje" cols="20" rows="15" class="mensaje" placeholder="Nungún mensaje fue encontrado."></textarea>
+            <div class="botones">
+                <button id="btn-copiar" class="btn-copiar" onclick="botonCopiar()">Copiar</button>
+            </div>
+        </aside>
+        <div class="widget-btns">
+            <div class="botones">
+                <button class="btn-encriptar" onclick="botonCifrar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="botonDescifrar()">Desencriptar</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <h3>Cristian Almanza Armenta</h3>
+        </footer>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

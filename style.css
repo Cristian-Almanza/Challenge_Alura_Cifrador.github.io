@@ -1,0 +1,189 @@
+body{
+    background: /* linear-gradient(lightblue, green) */ #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1480px;
+    margin:20px auto;
+    
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(4,auto);
+    grid-template-areas: "header      header      sidebar"
+                         "contenido   contenido   sidebar"
+                         "widget-btns widget-btns sidebar"
+                         "footer      footer      footer";
+}
+
+.contenido > div,
+.contenido > .header
+.contenido > .sidebar
+.contenido > .contenido
+.contenido > .footer{
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    /* background-color: lightblue; */
+    color:black;
+    grid-area: header;
+    
+}
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
+}
+.contenedor .contenido{
+    grid-area: contenido;
+    min-height: 150px;
+    text-align: center;
+    /* background: wheat; */
+}
+
+.contenedor .contenido .text-area{
+    border-color:#0A3871;
+    color:#0A3871;
+    margin-top:20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #E5E5E5;
+}
+::placeholder{color:#0A3871}
+
+.contenedor .contenido h6{
+    margin: 0 0;
+}
+.contenedor .sidebar{
+    /* background: #faa43d; */
+   /*  display:flex; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    grid-area: sidebar;;
+    
+}
+
+.contenedor .sidebar .mensaje{
+    /* background: white; */
+    background-image: url("./img/Muñeco.png");
+    background-repeat: no-repeat;
+    color:#0A3871;
+    border:none;
+    border-radius: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 500px;
+    padding: 15px;
+    
+
+}
+.contenedor .sidebar .mensaje::placeholder{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    padding-top: 150%;
+    text-align:center;
+}
+.contenedor .sidebar .mensaje:focus{
+    outline: none;
+}
+
+
+.contenedor .sidebar .btn-copiar{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    font-size: 23px;
+    border-radius: 24px;
+    color:#0A3871;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.contenedor .widget-btns{
+    /* background:#55a8fd; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: widget-btns;
+}
+
+.contenedor .widget-btns .botones{
+    display:flex;
+    margin-top: 0px;
+    padding-left: 0%;
+    
+}
+.contenedor .widget-btns .btn-encriptar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    font-size: 23px;
+    border-radius: 24px;
+    color:white;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+}
+.contenedor .widget-btns .btn-desencriptar{
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    font-size: 23px;
+    border-radius: 24px;
+    color:#0A3871;
+    cursor: pointer;
+    height: 50px;
+    margin-left: 15px;
+    width: 150px;
+}
+
+.contenedor .footer{
+    /* background:#12203e; */
+    color:black;
+    grid-area: footer;
+    text-align: center;
+}
+
+.contenedor .footer h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Responsive desing */
+@media screen and (max-width:750px){
+    .contenedor{
+        grid-template-areas:"header      header      header"
+                            "contenido   contenido   contenido"
+                            "widget-btns widget-btns widget-btns"
+                            "sidebar     sidebar     sidebar"
+                             "footer      footer      footer";
+    }
+   
+    .contenedor .sidebar .mensaje{
+        background-image: url("./img/Muñeco.png");
+        
+        height: 250px;
+    
+    }
+    .contenedor .sidebar .mensaje::placeholder{
+        font-size: 20px;
+        padding-top: 80%;
+        
+    }
+    .contenedor .widget-btns{
+        height: 50px;
+    }
+    
+}
+
